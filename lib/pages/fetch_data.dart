@@ -88,11 +88,9 @@ class _FetchDataState extends State<FetchData> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(13.0),
           ),
-          insetPadding:
-              EdgeInsets.all(20), // Controls the padding around the dialog
+          insetPadding: EdgeInsets.all(20),
           child: Container(
-            width:
-                MediaQuery.of(context).size.width * 0.9, // 90% of screen width
+            width: MediaQuery.of(context).size.width * 0.9,
             padding: EdgeInsets.all(20),
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -235,7 +233,8 @@ class _FetchDataState extends State<FetchData> {
                     )
                   : CircularProgressIndicator(
                       color: Colors.black,
-                    ))
+                    ),
+            )
           : ListView.builder(
               itemCount: data.length,
               itemBuilder: (context, index) {
